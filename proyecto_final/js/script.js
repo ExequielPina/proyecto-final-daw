@@ -1,0 +1,19 @@
+const btn_scrolltop = document.getElementById("btn_scrolltop")
+btn_scrolltop.addEventListener('click', () => {
+    window.scrollTo({
+        top:0,
+        behavior: "smooth"
+    })
+    
+})
+
+window.onscroll = () => {
+    if (window.scrollY < 300) {
+        btn_scrolltop.classList.remove("btn_scrolltop-on")
+
+    } else {
+        btn_scrolltop.classList.add("btn_scrolltop-on") 
+    }
+}
+
+
